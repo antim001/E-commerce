@@ -1,70 +1,238 @@
-:root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #794afa;
-    --secondary-dark-color: #453c5c;  /* Added semicolon */
-    
-    --white-color: #ffffff;  /* Fixed hex code */
-    --light-bg-color: #f2f3f5;
-    --light-text-color: #7c5e8e;  /* Fixed hex code */
-    --border-color: #e5eBcc;
-    --dark-color: #0a021c;
-
-    --font-small: 13px;  /* Fixed variable name */
-    --font-smaller: 11px;
-    --percent100: 100%;
-    --percent50: 50%;
-
-    --fw3: 300;
-    --fw5: 500;
-    --fw6: 600;
-    --fw7: 700;
-    --fw8: 800;
-
-    --trans-background-color: background-color .3s, color .3s;  /* Fixed syntax */
-    --trans-background: background-color .3s;  /* Fixed syntax */
-    --trans-color: color .3s;  /* Fixed syntax */
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 0.93em;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.column {
-    margin-left: 0;  /* Fixed margin syntax */
-    margin-right: -0.938em;  /* Fixed margin syntax */
+header {
+    background: #007bff; /* Bootstrap primary color */
+    color: #fff;
+    padding: 10px 0;
 }
 
-.column .row {
-    padding: 0 0.938em;
+nav ul {
+    list-style: none;
+    text-align: center;
 }
 
-.flexwrap {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: #e9ecef; /* Light background for hero section */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.featured-products {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.flexcenter {
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Add margin between products */
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Round the image corners */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.cart, .checkout {
+    padding: 20px;
+    background: #fff; /* White background for cart and checkout */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Margin around the sections */
+}
+
+.cart-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Separator line between items */
 }
 
-.flexitem {
-    display: flex;
-    align-items: center;
+.cart-item:last-child {
+    border-bottom: none; /* Remove the line for the last item */
 }
 
-.flexcol {
+.checkout form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 
-/* Responsive */
-@media screen and (min-width: 992px) {
-    .container {
-        padding: 0 2em;
+.checkout form label {
+    margin: 10px 0 5px;
+    font-weight: bold; /* Bold labels */
+}
+
+.checkout form input,
+.checkout form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout form button {
+    padding: 10px;
+    background: #28a745; /* Bootstrap success color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.checkout form button:hover {
+    background: #218838; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .featured-products {
+        flex-direction: column; /* Stack products on smaller screens */
+        align-items: center;
+    }
+}
+//footer
+footer {
+    text-align: center; /* Centered footer text */
+    padding: 20px 0; /* Padding for footer */
+    background: #007bff; /* Footer background color */
+    color: #fff; /* Footer text color */
+    width: 100%; /* Full width */
+    height: 100px; /* Set a fixed height */
+}
+
+footer p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.social-links {
+    margin-top: 10px; /* Space above social links */
+}
+
+.social-links a {
+    color: #ffcc00; /* Social link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between social links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-links a:hover {
+    color: #fff; /* Change color on hover */
+}
+//nav section
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    background-color: #007bff; /* Background color */
+    padding: 10px 20px; /* Padding */
+    color: #fff; /* Text color */
+}
+
+.logo {
+    flex: 1; /* Allow logo to take available space */
+    font-size: 1.5em; /* Increase logo font size */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the menu items */
+    flex: 2; /* Allow nav links to take available space */
+}
+
+.nav-links li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack the lines */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.hamburger span {
+    height: 4px; /* Bar height */
+    width: 25px; /* Bar width */
+    background-color: #fff; /* Bar color */
+    margin: 4px; /* Space between bars */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute; /* Positioning */
+        background-color: #007bff; /* Match background */
+        top: 60px; /* Below the navbar */
+        right: 0; /* Align right */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
     }
 }
