@@ -1,64 +1,70 @@
-:root{
---primary-color:#ff6b6b;
---secondary-color:#794afa;
---secondary-dark-color:#453c5c
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;  /* Added semicolon */
+    
+    --white-color: #ffffff;  /* Fixed hex code */
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c5e8e;  /* Fixed hex code */
+    --border-color: #e5eBcc;
+    --dark-color: #0a021c;
 
---white-color:#fffffff
---light-bg-color:#f2f3f5;
---light-text-color:#7c5e8ec;
---border-color:#e5eBcc;
---dark-color:#0a021c;
+    --font-small: 13px;  /* Fixed variable name */
+    --font-smaller: 11px;
+    --percent100: 100%;
+    --percent50: 50%;
 
--font-small:13px;
---fontsmaller:11px;
---percent100:100%;
---percent50:50%;
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
 
---fw3:300;
---fw5:500;
---fw6:600;
---fw7:700;
---fw8:800;
-
---trans-background-color:background-color .3s,color .3s;
---trans-background:background-color: .3s;
---trans-color:color .3s
-
-
-.container{
- max-width:1280px;
- margin:0 auto;
- padding: 0 0.93em;
- }
- .column{
- margin-left:0 0.938em;
- margin-right:-0.938em;
-
- .column .row{
- padding: 0 0.938em;
-
- }
- .flexwrap{
- display:flex;
- flex-wrap:wrap;
- }
- .flexcenter{
- display:flex;
- align-items:center;
- justify-content:center;
-
- }
-.flexitem{
-display:flex;
-align-items:center;
+    --trans-background-color: background-color .3s, color .3s;  /* Fixed syntax */
+    --trans-background: background-color .3s;  /* Fixed syntax */
+    --trans-color: color .3s;  /* Fixed syntax */
 }
-.flexcol{
-display:flex;
-flex-direction:column;
-gap:1em;
 
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.93em;
+}
 
-/*responsive */
-@media screen and (min-width:992px){
-.container{
-padding:0 2em;
+.column {
+    margin-left: 0;  /* Fixed margin syntax */
+    margin-right: -0.938em;  /* Fixed margin syntax */
+}
+
+.column .row {
+    padding: 0 0.938em;
+}
+
+.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexitem {
+    display: flex;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Responsive */
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0 2em;
+    }
+}
