@@ -236,3 +236,76 @@ nav {
         display: flex; /* Show hamburger icon */
     }
 }
+//featued-products
+.featured-products {
+    max-width: 1280px; /* Limit the max width of the section */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center text within the section */
+}
+
+.featured-header {
+      text-align: center;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.product-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 20px); /* 3 products per row with space */
+    margin: 10px; /* Margin around each product */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Padding inside each product */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.product img {
+    width: 100%; /* Full width of the product container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px; /* Set a max height for consistency */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+.product h3 {
+    font-size: 1.2em; /* Font size for product name */
+    margin: 10px 0 5px; /* Margin around product name */
+}
+
+.product p {
+    font-size: 1em; /* Font size for price */
+    margin: 5px 0; /* Margin around price */
+}
+
+.product button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.product button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Two products per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* Full width on very small screens */
+    }
+}
+
