@@ -324,40 +324,40 @@ body {
 }
 
 /* Header styles */
-header {
+.product-header {
     background-color: #ff6b6b;
     padding: 1em 0;
 }
 
-nav {
+.product-header nav {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1em;
 }
 
-nav ul {
+.product-header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
+.product-header nav ul li {
     margin: 0 1.5em;
 }
 
-nav ul li a {
+.product-header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+.product-header nav ul li a:hover {
     color: #f2f3f5;
 }
 
 /* Main content styles */
-main {
+.product-main {
     padding: 2em 0;
     max-width: 1280px;
     margin: 0 auto;
@@ -405,7 +405,7 @@ main {
 }
 
 /* Footer styles */
-footer {
+.product-footer {
     text-align: center;
     padding: 1em 0;
     background-color: #333;
@@ -413,17 +413,82 @@ footer {
     margin-top: 2em; /* Space above footer */
 }
 
-footer .social-links {
+.product-footer .social-links {
     margin-top: 0.5em; /* Space above social links */
 }
 
-footer .social-links a {
+.product-footer .social-links a {
     color: #fff;
     margin: 0 0.5em;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer .social-links a:hover {
+.product-footer .social-links a:hover {
     color: #ff6b6b; /* Change color on hover */
 }
+/* Trending Page Styles */
+.trending-header {
+    background-color: #ff6b6b;
+    padding: 1em 0;
+}
+
+.trending-header nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.trending-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.trending-header nav ul li {
+    margin: 0 1.5em;
+}
+
+.trending-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.trending-header nav ul li a:hover {
+    color: #f2f3f5;
+}
+
+/* Main content styles */
+.trending-main {
+    padding: 2em 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+
+.
+
+.product button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #e55b5b; /* Darker shade on hover */
+}
+
+/* Footer styles */
+.
